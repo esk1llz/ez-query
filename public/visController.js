@@ -178,7 +178,12 @@ define(function (require) {
       }
 
       if ($scope.vis.params.linked) {
-        linkedVis = new LinkedVis($scope.vis.params.linkedVis.visId, $scope.vis.params.linkedVis.indexId);
+        linkedVis = new LinkedVis(
+          $scope.vis.params.linkedVis.visId, 
+          $scope.vis.params.linkedVis.indexId,
+          {
+            normalize: _.get($scope.vis.params.linkedVis, 'normalize', false)
+          });
       }
     }
   });
