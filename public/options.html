@@ -29,6 +29,7 @@
     </div>
   </div>
 
+  <div ng-show="vis.params.filterType == 'query'">
   <div form-group">
     <label>
       <input type="checkbox"
@@ -40,4 +41,5 @@
     </label>
   </div>
   <linked-vis linked-vis="vis.params.linkedVis" ng-show="vis.params.linked"></linked-vis>
+  </div>
 </div>
